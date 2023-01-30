@@ -8,7 +8,7 @@ console.log(font)
 }
 
 function setup() { 
-createCanvas(600, 400);
+createCanvas(displayWidth, displayHeight);
 msg ='부    들    부    들'
 pts = font.textToPoints(msg, 0, 0, 140,
                         {sampleFactor: 0.1,
