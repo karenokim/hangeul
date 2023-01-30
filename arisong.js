@@ -6,7 +6,6 @@ function setup() {
   }
 
 function draw() {
-  background(0);  
   translate(0, 100);
   textSize(122);
 
