@@ -1,62 +1,78 @@
-let pts;
-let pts02;
-let arisong;
+let font1;
+let font2;
+let fontSize1 = 250; // font size
+let fontSize2 = 30;
+let word1; // text Korean
+let word2; // text English
+let pts1 = []; // store path data
+let pts2 = [];
 
-function preload(){
-  arisong = loadFont('Ghanachocolate.otf');
+function preload() {
+  font1 = loadFont("GUNG.otf");
+  font2 = loadFont("GHANA.otf");
 }
 
+
+
 function setup() {
-  createCanvas(600, 600);
-  pts = arisong.textToPoints('아리송', width/10, 350, 170,{
-    sampleFactor: 0.3, //density of dots 
-    simplifyThreshold: 0
+  createCanvas(800, 800);
+  // textFont(font1);
+  textSize(fontSize1);
+
+  pts1 = font1.textToPoints("하늘의 별 따기", -20, 0, fontSize1, {
+    sampleFactor: 0.0979,
+    simplifyThreshold: 0.0,
   });
-  pts02 = arisong.textToPoints('하늘의 별 따기', width/10, 100, 170,{
-    sampleFactor: 0.3, //density of dots 
-    simplifyThreshold: 0
+
+  // textFont(font2);
+
+  pts2 = font2.textToPoints("식은 죽 먹기", -20, 0, fontSize1, {
+    sampleFactor: 0.13697,
+    simplifyThreshold: 0.0,
   });
-  }
 
+  print(pts1.length, pts2.length);
 
-// function ns(x, y, z, scale_, min_, max_) {
-// return map(
-//   noise(x*scale_, y*scale_, z*scale_),
-//   0, 1, min_, max_);
-// }
+  stroke(255);
 
-// let xz = 0;
-// let yz = 200;
-// function draw() { 
-// push();
-// translate(10, height/2);
-// for (let i = 0; i < pts02.length; i++) {
-//   let xoff = ns(pts02[i].x, pts02[i].y, xz, 0.005, -80, 80);
-//   let yoff = ns(pts02[i].y, pts02[i].x, yz, 0.005, -80, 80);
-//   ellipse(pts02[i].x + xoff, pts02[i].y + yoff, 5, 5);
-// }
-// pop();
-// xz += 5;
-// yz += 5;
-// }
-
+}
 
 function draw() {
-  background(0);  
-  translate(0, 100);
-  textSize(122);
-  beginShape(POINTS);
-  stroke(255);
-  for(let i =0; i< pts.length; i++){
-   vertex(pts[i].x + sin(frameCount*0.05 + pts[i].y*0.1)*10, pts[i].y);
+  background(0);
+  textSize(fontSize2);
+  fill(255);
+  const d = sin(frameCount / 50) * 3;
+  const angle = frameCount / 100;
+  push();
+  translate(100, 200);
+  word2 = " ";
+  text(word2, 100, 100, 100);
+
+  // beginShape();
+  for (let i = 0; i < pts1.length; i++) {
+    push();
+    translate(pts1[i].x, pts1[i].y);
+    rotate(angle);
+    line(-d, -d, +d, +d);
+    line(+d, -d, -d, +d);
+
+    pop();
+    if (pts1[i].x <= pts2[i].x) {
+      pts1[i].x++;
+    }
+
+    if (pts1[i].x >= pts2[i].x) {
+      pts1[i].x--;
+    }
+
+    if (pts1[i].y <= pts2[i].y) {
+      pts1[i].y++;
+    }
+
+    if (pts1[i].y >= pts2[i].y) {
+      pts1[i].y--;
+    }
   }
-  endShape();
-  
-  beginShape(POINTS);
-  stroke(255);
-  for(let i =0; i< pts02.length; i++){
-   vertex(pts02[i].x + tan(frameCount*0.005 + pts02[i].y*0.1)*2, pts02[i].y);
-  }
-  endShape();
-  
+  // endShape();
+  pop();
 }
