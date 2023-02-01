@@ -18,17 +18,17 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   // textFont(font1);
   textSize(fontSize1);
-  textAlign(CENTER);
+  // textAlign(CENTER);
 
-  pts1 = font1.textToPoints("하늘의 별 따기", width/2, height/2, fontSize1, {
+  pts1 = font1.textToPoints("하늘의 별 따기", 50, height/2, fontSize1, {
     sampleFactor: 0.0979,
   });
 
-  pts2 = font2.textToPoints("식은 죽 먹기", width/2, height/2, fontSize1, {
+  pts2 = font2.textToPoints("식은 죽 먹기",50, height/2, fontSize1, {
     sampleFactor: 0.13638,
   });
 
-   pts3 = font2.textToPoints("계란으로 바위치기", width/2, height/2, fontSize1, {
+   pts3 = font2.textToPoints("계란으로 바위치기",50, height/2, fontSize1, {
     sampleFactor: 0.08528,
   });
   
