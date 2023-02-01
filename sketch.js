@@ -20,15 +20,15 @@ function setup() {
   textSize(fontSize1);
   // textAlign(CENTER);
 
-  pts1 = font1.textToPoints("하늘의 별 따기", 50, height/2, fontSize1, {
+  pts1 = font1.textToPoints("하늘의 별 따기", 50, 0, fontSize1, {
     sampleFactor: 0.0979,
   });
 
-  pts2 = font2.textToPoints("식은 죽 먹기",50, height/2, fontSize1, {
+  pts2 = font2.textToPoints("식은 죽 먹기",50, 20, fontSize1, {
     sampleFactor: 0.13638,
   });
 
-   pts3 = font2.textToPoints("계란으로 바위치기",50, height/2, fontSize1, {
+   pts3 = font2.textToPoints("계란으로 바위치기",50, 40, fontSize1, {
     sampleFactor: 0.08528,
   });
   
@@ -96,7 +96,7 @@ function draw() {
   pop();
 
   if (mouseY < 200) {
-    text("drinking a cold porridge", 300, 300, 10);
+    text("  ", 300, 300, 10);
   } else {
     text("", 100, 20, 20);
   }
