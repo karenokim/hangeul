@@ -15,7 +15,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
   // textFont(font1);
   textSize(fontSize1);
 
