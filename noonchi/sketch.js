@@ -29,7 +29,7 @@ function setup() {
   pts3 = typef.textToPoints("부들부들", 130, 400, 300, {
     sampleFactor: 0.0814,
   });
-  pts4 = typef.textToPoints("아리송", 150, 400, 300, {
+  pts4 = typef.textToPoints("아리송", 165, 400, 300, {
     sampleFactor: 0.1325,
   });
   // pts5 = needle.textToPoints("부들부들", 820, 330, 150, {
@@ -178,9 +178,6 @@ function morph3() {
 
 
 
-
-
-
 function mousePressed() {
 
   num++;
@@ -191,34 +188,5 @@ function mousePressed() {
 
   print(num);
 }
-    // if (mouseIsPressed) {
-    //   if (pts1[i].x < pts2[i].x) {
-    //     pts1[i].x++;
-    //   }
-    //   if (pts1[i].x > pts2[i].x) {
-    //     pts1[i].x--;
-    //   }
-    //   if (pts1[i].y < pts2[i].y) {
-    //     pts1[i].y++;
-    //   }
-    //   if (pts1[i].y > pts2[i].y) {
-    //     pts1[i].y--;
-    //   }
-    // }
 
-    //
-    //    if (pts1[i].x <= pts2[i].x) {
-    //   pts2[i].x++;
-    // }
-    // if (pts1[i].x >= pts2[i].x) {
-    //   pts2[i].x--;
-    // }
-    // if (pts1[i].y <= pts2[i].y) {
-    //   pts2[i].y++;
-    // }
-    // if (pts1[i].y >= pts2[i].y) {
-    //   pts2[i].y--;
-    // }
-  
-  // endShape(CLOSE);
 
