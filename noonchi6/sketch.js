@@ -36,7 +36,7 @@ function draw() {
   background(0, 0, 0, 10);
 
   for (let i = 0; i < pts1.length; i = i + 2) {
-    stroke(180, 200, 200, 100);
+    stroke(255, 100);
     line(
       pts1[i].x + 10,
       pts1[i].y + 10,
@@ -47,7 +47,7 @@ function draw() {
   }
 
   for (let i = 0; i < pts2.length; i++) {
-    fill(180, 200, 200, 100);
+    fill(255, 100);
     let xoff = ns(pts2[i].x, pts2[i].y, xz, 0.005, -50, 50);
     let yoff = ns(pts2[i].y, pts2[i].x, yz, 0.005, -50, 50);
     ellipse(pts2[i].x + xoff, pts2[i].y + yoff, 5, 5);
