@@ -1,5 +1,5 @@
 let needle;
-let pts;
+let pts2 =[];
 let xz = 0;
 let yz = 1000;
 
