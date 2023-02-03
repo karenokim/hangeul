@@ -27,10 +27,11 @@ function draw() {
   var g = 255 * noise(t+15)+100;
   var b = 255 * noise(t+20)+100;
   textFont(caslon);
-  fill(255);
+
+  background(0,0,0);
+    fill(255);
   text("부들부들 is an onomatopoeia used when caught in a nerve wracking situation",windowWidth/2,900,400,400);
   
-  background(0,0,0);
   stroke(r,g,b);
     t += 0.01;
   for(let i =0; i< pts.length; i=i+2){

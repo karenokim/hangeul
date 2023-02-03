@@ -25,7 +25,6 @@ function ns(x, y, z, scale_, min_, max_) {
 function draw() { 
   background(0);
   noStroke();
-  fill(255);
   textFont(caslon);
   fill(255);
   text("썩소 is a shortened word with two words combined: 썩은, meaning rotten, and 미소, meaning a smile. Combined together, this word refers to a smile that is sarcastic or empty. ",windowWidth/2,900,400,400);
