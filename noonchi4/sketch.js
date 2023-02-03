@@ -1,5 +1,5 @@
-let pts;
-let pts02;
+let pts=[];
+
 let arisong;
 
 function preload(){
