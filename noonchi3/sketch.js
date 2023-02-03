@@ -14,7 +14,7 @@ function setup() {
   textAlign(CENTER,CENTER);
     // t = 0;
 
-  pts = needle.textToPoints('부들부들', windowWidth/2-200, windowHeight/2, 140,{
+  pts = needle.textToPoints('부들부들', windowWidth/2-250, windowHeight/2, 140,{
     sampleFactor: 0.3,
     simplifyThreshold: 0
   });
