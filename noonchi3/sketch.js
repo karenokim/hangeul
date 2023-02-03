@@ -28,7 +28,7 @@ function draw() {
   var b = 255 * noise(t+20)+100;
   textFont(caslon);
   fill(255);
-  text("부들부들 is an onomatopoeia used when caught in a nerve wracking situation",windowWidth/2,900,100);
+  text("부들부들 is an onomatopoeia used when caught in a nerve wracking situation",windowWidth/2,900,400,400);
   
   background(0,0,0);
   stroke(r,g,b);
