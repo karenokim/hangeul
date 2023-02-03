@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, 600);
   colors = [color(65, 105, 185), color(245, 95, 80), color(15, 233, 118)];
   textFont(typef);
   textSize(typeS);
