@@ -17,11 +17,11 @@ function setup() {
   textFont(typef);
   textSize(typeS);
   typeS = 200;
-  pts1 = typef.textToPoints("warp", random(0,300), random(100,400), typeS, {
+  pts1 = typef.textToPoints("warp", random(1000,1400), random(100,400), typeS, {
     sampleFactor: 0.1,
     simplifyThreshold: 0.0,
   });
-  pts2 = typef.textToPoints("weft", random(500,windowWidth), random(100,300), typeS, {
+  pts2 = typef.textToPoints("weft", random(500,1400), random(100,300), typeS, {
     sampleFactor: 0.1165,
     simplifyThreshold: 0.0,
   });
@@ -29,7 +29,7 @@ function setup() {
     sampleFactor: 0.1,
     simplifyThreshold: 0.0,
   });
-    pts4 = typef.textToPoints("weft", random(800,windowWidth), random(400,700), typeS, {
+    pts4 = typef.textToPoints("weft", random(800,1200), random(400,700), typeS, {
     sampleFactor: 0.1165,
     simplifyThreshold: 0.0,
   });
